@@ -61,12 +61,12 @@ body {
   margin-bottom: 50px;
 }
 
-.productos > h1{
+.productos > h1 {
   width: 100%;
   text-align: center;
 }
 
-.card{
+.card {
   width: 28%;
   display: flex;
   align-items: center;
@@ -77,25 +77,25 @@ body {
   gap: 10px;
   height: auto;
   min-height: 300px;
-  box-shadow: -6px 6px 17px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: -6px 6px 17px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: -6px 6px 17px 0px rgba(0,0,0,0.75);
+  box-shadow: -6px 6px 17px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -6px 6px 17px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -6px 6px 17px 0px rgba(0, 0, 0, 0.75);
 }
 
-.card > img{
+.card > img {
   width: 100%;
   height: 200px;
   object-fit: cover; /* Ajuste de la imagen */
 }
 
-.card-container--info{
+.card-container--info {
   display: flex;
   align-items: center;
   width: 100%;
   flex-direction: column;
 }
 
-.card-container--value{
+.card-container--value {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -104,11 +104,11 @@ body {
   font-size: 1.2em;
 }
 
-.card-container--value > img{
+.card-container--value > img {
   width: 25px;
 }
 
-.formulario{
+.formulario {
   width: 30%;
   height: 80vh;
   display: flex;
@@ -119,7 +119,7 @@ body {
   flex-wrap: wrap;
 }
 
-.form{
+.form {
   width: 100%;
   display: flex;
   align-items: center;
@@ -128,27 +128,26 @@ body {
   padding-top: 20px;
 }
 
-.formulario-campo{
+.formulario-campo {
   width: 100%;
   display: flex;
   justify-content: center;
-
 }
-.campo__completo{
+.campo__completo {
   padding: 10px;
   width: 80%;
   border-radius: 10px;
   font-size: 15px;
 }
 
-.botones{
+.botones {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-footer{
+footer {
   margin-top: 20px;
   background-color: var(--primario);
   height: 7vh;
@@ -158,42 +157,45 @@ footer{
   align-items: center;
   text-align: center;
   color: var(--texto);
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
-  .navbar{
+  .navbar {
     width: 100%;
   }
-  
-  .informacion__principal{
+
+  .informacion__principal {
     flex-direction: column;
   }
-  .productos{
+  .productos {
     width: 95%;
-    
   }
 
-  .card{
+  .card {
     min-width: 300px;
   }
 
-  .formulario{
+  .formulario {
     width: 95%;
     height: auto;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .productos{
+  .productos {
     height: auto;
   }
-  
-  .botones{
+
+  .botones {
     flex-direction: column;
     align-items: center;
-    
   }
-  .btn{
+  .btn {
     width: 90%;
+  }
+
+  .formulario {
+    width: 85%;
   }
 }
