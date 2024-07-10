@@ -15,46 +15,100 @@
       <section class="productos">
         <h1>Tus productos:</h1>
         <div class="card">
-          <img src="./img.jpg"/>
+          <img src="./img.jpg" />
           <div class="card-container--info">
             <p>Atencion al cliente</p>
             <div class="card-container--value">
               <p>$0.00</p>
-              <img src="./trash.png"/>
+              <img src="../img/trash.png" />
             </div>
           </div>
         </div>
         <div class="card">
-          <img src="https://www.soyvisual.org/sites/default/files/styles/twitter_card/public/images/photos/yo.jpg?itok=0ZTbftkv"/>
+          <img
+            src="https://www.soyvisual.org/sites/default/files/styles/twitter_card/public/images/photos/yo.jpg?itok=0ZTbftkv"
+          />
           <div class="card-container--info">
             <p>Atencion al cliente</p>
             <div class="card-container--value">
               <p>$0.00</p>
-              <img src="./trash.png"/>
+              <img src="../img/trash.png" />
             </div>
           </div>
         </div>
         <div class="card">
-          <img src="https://pymstatic.com/4318/conversions/ello-yo-superyo-wide.jpg"/>
+          <img
+            src="https://pymstatic.com/4318/conversions/ello-yo-superyo-wide.jpg"
+          />
           <div class="card-container--info">
             <p>Atencion al cliente</p>
             <div class="card-container--value">
               <p>$0.00</p>
-              <img src="./trash.png"/>
+              <img src="../img/trash.png" />
             </div>
           </div>
         </div>
         <div class="card">
-          <img src="https://assetsio.gnwcdn.com/spider-man-remastered-pc.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp"/>
+          <img
+            src="https://assetsio.gnwcdn.com/spider-man-remastered-pc.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp"
+          />
           <div class="card-container--info">
             <p>Atencion al cliente</p>
             <div class="card-container--value">
               <p>$0.00</p>
-              <img src="./trash.png"/>
+              <img src="../img/trash.png" />
             </div>
           </div>
         </div>
-        
+      </section>
+      <section class="formulario">
+        <h1>Agregar producto:</h1>
+        <form>
+          <fieldset class="formulario-campo">
+            <input
+              name="nombre"
+              id="nombre"
+              class="campo__completo"
+              type="text"
+              required
+            />
+            <span class="mensaje-error"></span>
+          </fieldset>
+          <fieldset class="formulario-campo">
+            <input
+              name="precio"
+              id="precio"
+              class="campo__completo"
+              type="number"
+              required
+            />
+            <span class="mensaje-error"></span>
+          </fieldset>
+          <fieldset class="formulario-campo">
+            <input
+              name="imagen"
+              id="imagen"
+              class="campo__completo"
+              type="url"
+              required
+            />
+            <span class="mensaje-error"></span>
+          </fieldset>
+          <input 
+            value="Enviar"
+            class="btn"
+            id="enviar"
+            data-boton-enviar
+            type="submit"
+          />
+          <input 
+            value="Limpiar"
+            class="btn"
+            id="limpiar"
+            data-boton-limpiar
+            type="button"
+          />
+        </form>
       </section>
     </main>
   </body>
