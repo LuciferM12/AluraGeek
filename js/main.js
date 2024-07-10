@@ -1,3 +1,5 @@
+import { tiposError, mensajes } from "./customErrors.js";
+
 const camposDeFormulario = document.querySelectorAll("[required]");
 const formulario = document.querySelector("[data-formulario]");
 
@@ -22,14 +24,14 @@ function verificarCampo(campo) {
   if (campo.name === "precio") {
     if (campo.value <= 0) {
       campo.setCustomValidity("Ingrese un precio válido");
-      mensaje = "Ingrese un precio válido";
-    }
-  } else {
-    if (campo.value === "") {
-      campo.setCustomValidity(`El campo ${campo.name} no puede estar vacío`);
-      mensaje = `El campo ${campo.name} no puede estar vacío`;
     }
   }
+
+  tiposError.forEach((error) => {
+    if (campo.validity[error]) {
+      mensaje = mensajes[campo.name][error];
+    }
+  });
 
   const mensajeError = campo.parentNode.querySelector(".mensaje-error");
   const validarInputCheck = campo.checkValidity();
