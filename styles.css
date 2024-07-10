@@ -25,7 +25,7 @@ body {
 
 .btn {
   border-radius: 10px;
-  width: 100px;
+  width: 40%;
   height: 30px;
   border: none;
   background-color: var(--boton);
@@ -58,7 +58,7 @@ body {
   gap: 10px;
   justify-content: space-evenly;
   overflow-y: auto;
-
+  margin-bottom: 50px;
 }
 
 .productos > h1{
@@ -110,15 +110,90 @@ body {
 
 .formulario{
   width: 30%;
-  border: #60a6a6 solid;
   height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  gap: 10px;
   font-size: 1.5em;
   flex-wrap: wrap;
 }
 
+.form{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 20px;
+}
 
+.formulario-campo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+.campo__completo{
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.botones{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+footer{
+  margin-top: 20px;
+  background-color: var(--primario);
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--texto);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar{
+    width: 100%;
+  }
+  
+  .informacion__principal{
+    flex-direction: column;
+  }
+  .productos{
+    width: 95%;
+    
+  }
+
+  .card{
+    min-width: 300px;
+  }
+
+  .formulario{
+    width: 95%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .productos{
+    height: auto;
+  }
+  
+  .botones{
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .btn{
+    width: 90%;
+  }
+}

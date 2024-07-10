@@ -63,7 +63,7 @@
       </section>
       <section class="formulario">
         <h1>Agregar producto:</h1>
-        <form>
+        <form class="form" data-formulario>
           <fieldset class="formulario-campo">
             <input
               name="nombre"
@@ -71,6 +71,7 @@
               class="campo__completo"
               type="text"
               required
+              placeholder="nombre..."
             />
             <span class="mensaje-error"></span>
           </fieldset>
@@ -81,6 +82,7 @@
               class="campo__completo"
               type="number"
               required
+              placeholder="precio..."
             />
             <span class="mensaje-error"></span>
           </fieldset>
@@ -91,25 +93,34 @@
               class="campo__completo"
               type="url"
               required
+              placeholder="imagen..."
             />
             <span class="mensaje-error"></span>
           </fieldset>
-          <input 
-            value="Enviar"
-            class="btn"
-            id="enviar"
-            data-boton-enviar
-            type="submit"
-          />
-          <input 
-            value="Limpiar"
-            class="btn"
-            id="limpiar"
-            data-boton-limpiar
-            type="button"
-          />
+          <div class="botones">
+            <input
+              value="Enviar"
+              class="btn"
+              id="enviar"
+              data-boton-enviar
+              type="submit"
+            />
+            <input
+              value="Limpiar"
+              class="btn"
+              id="limpiar"
+              data-boton-limpiar
+              type="button"
+            />
+          </div>
         </form>
       </section>
     </main>
+    <footer>
+      <div>
+        <h1>AluraGeek</h1>
+        <p>Desarrollado por Omar Rodríguez</p>
+      </div>
+    </footer>
   </body>
 </html>
