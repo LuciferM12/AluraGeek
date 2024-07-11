@@ -19,7 +19,7 @@ async function crearProducto(e) {
     lista.removeChild(lista.firstChild);
   }
   lista = document.querySelector("[data-lista]");
-  mostrarProductos.listarProductos(lista);
+   await mostrarProductos.listarProductos(lista);
 }
 
 formulario.addEventListener("submit", (e) => crearProducto(e));
