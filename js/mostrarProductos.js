@@ -16,7 +16,7 @@ function crearCard(nombre, precio, imagen, id) {
   return producto;
 }
 
-async function listarProductos() {
+async function listarProductos(lista) {
   const listaAPI = await conexionAPI.listarProductos();
   if (listaAPI.length == 0) {
     lista.innerHTML = "<h1>No hay productos aun</h1>";
@@ -39,6 +39,10 @@ async function listarProductos() {
         try {
           await conexionAPI.eliminarProducto(id);
           e.target.closest(".card").remove();
+          while(lista.firstChild){
+            lista.removeChild(lista.firstChild);
+          }
+          listarProductos(lista);
         } catch (error) {
           console.error("Error al eliminar el producto");
         }
@@ -47,4 +51,4 @@ async function listarProductos() {
   }
 }
 
-listarProductos();
+listarProductos(lista);
