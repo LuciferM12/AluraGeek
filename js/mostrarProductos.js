@@ -10,7 +10,7 @@ function crearCard(nombre, precio, imagen, id) {
         <p>${nombre}</p>
         <div class="card-container--value">
             <p>$${precio}</p>
-            <img src="../img/trash.png" class="borrar" data-id=${id}/>
+            <img src="https://img.icons8.com/?size=100&id=13086&format=png&color=000000" class="borrar" data-id=${id}/>
         </div>
     </div>`;
   return producto;
