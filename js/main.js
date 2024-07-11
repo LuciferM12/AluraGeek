@@ -1,17 +1,20 @@
 import { tiposError, mensajes } from "./customErrors.js";
+import { conexionAPI } from "./conexionAPI.js";
 
 const camposDeFormulario = document.querySelectorAll("[required]");
 const formulario = document.querySelector("[data-formulario]");
 
-formulario.addEventListener("submit", (e) => {
+async function crearProducto(e) {
   e.preventDefault();
   const listaRespuestas = {
     nombre: e.target.elements["nombre"].value,
     precio: e.target.elements["precio"].value,
     imagen: e.target.elements["imagen"].value,
   };
-  localStorage.setItem("productos", JSON.stringify(listaRespuestas));
-});
+  await conexionAPI.enviarProducto(JSON.stringify(listaRespuestas));
+}
+
+formulario.addEventListener("submit", (e) => crearProducto(e));
 
 camposDeFormulario.forEach((campo) => {
   campo.addEventListener("blur", () => verificarCampo(campo));
