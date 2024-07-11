@@ -1,22 +1,22 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombre": "Funko Spider-Man",
-      "precio": 22.99,
-      "imagen": "https://i0.wp.com/cocoliso.com.mx/wp-content/uploads/2023/04/PGEE-fun-whatif-zombie-hunter-spidey1.png?fit=1762%2C1926&ssl=1"
+      "id": "3e8d",
+      "nombre": "Funko de Spider Man",
+      "precio": "400",
+      "imagen": "https://i5.walmartimages.com.mx/mg/gm/3pp/asr/ca40758a-daa3-4d8a-9ddb-d0408fbdb653.e9d2e837fa20083afc969daaf106a4e9.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
     },
     {
-      "id": "a389",
-      "nombre": "Funko Superman",
-      "precio": "399",
-      "imagen": "https://m.media-amazon.com/images/I/61guRItqxNL._AC_UF894,1000_QL80_.jpg"
+      "id": "f6bf",
+      "nombre": "Funko Jon Snow",
+      "precio": "400",
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/71ifiFPPeGL._AC_UL600_SR600,600_.jpg"
     },
     {
-      "id": "e67a",
-      "nombre": "Funko Mr. Fantastic",
-      "precio": "200.00",
-      "imagen": "https://m.media-amazon.com/images/I/51uSdViQlNL._AC_UF894,1000_QL80_.jpg"
+      "id": "4658",
+      "nombre": "Funko Darth Vader",
+      "precio": "500",
+      "imagen": "https://m.media-amazon.com/images/I/61u6xOgDdQS.jpg"
     }
   ]
 }

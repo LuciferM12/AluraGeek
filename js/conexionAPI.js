@@ -12,11 +12,25 @@ async function enviarProducto(producto) {
     body: producto,
   });
 
-  const conexionConvertida = conexion.json();
-  return conexionConvertida;
+  //const conexionConvertida = conexion.json();
+
+  if (!conexion.ok) {
+    throw new Error("Ha ocurrido un error enviando el producto");
+  }
+}
+
+async function eliminarProducto(id) {
+  const conexion = await fetch(`http://localhost:3001/productos/${id}`, {
+    method: "DELETE",
+  });
+  if (!conexion.ok) {
+    throw new Error("Error de eliminación");
+  }
+  return true;
 }
 
 export const conexionAPI = {
   listarProductos,
   enviarProducto,
+  eliminarProducto,
 };

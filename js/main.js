@@ -36,6 +36,9 @@ function verificarCampo(campo) {
     }
   });
 
+
+
+
   const mensajeError = campo.parentNode.querySelector(".mensaje-error");
   const validarInputCheck = campo.checkValidity();
 
