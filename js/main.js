@@ -1,6 +1,6 @@
 import { tiposError, mensajes } from "./customErrors.js";
 import { conexionAPI } from "./conexionAPI.js";
-import listarProductos from "./mostrarProductos.js"
+import { mostrarProductos } from "./mostrarProductos.js";
 
 const camposDeFormulario = document.querySelectorAll("[required]");
 const formulario = document.querySelector("[data-formulario]");
@@ -12,15 +12,14 @@ async function crearProducto(e) {
     precio: e.target.elements["precio"].value,
     imagen: e.target.elements["imagen"].value,
   };
-   await conexionAPI.enviarProducto(JSON.stringify(listaRespuestas));
+  await conexionAPI.enviarProducto(JSON.stringify(listaRespuestas));
   const lista = document.querySelector("[data-lista]");
 
-  while(lista.firstChild){
+  while (lista.firstChild) {
     lista.removeChild(lista.firstChild);
   }
-
-  listarProductos(lista);
-
+  lista = document.querySelector("[data-lista]");
+  mostrarProductos.listarProductos(lista);
 }
 
 formulario.addEventListener("submit", (e) => crearProducto(e));

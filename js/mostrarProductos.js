@@ -39,7 +39,7 @@ async function listarProductos(lista) {
         try {
           await conexionAPI.eliminarProducto(id);
           e.target.closest(".card").remove();
-          while(lista.firstChild){
+          while (lista.firstChild) {
             lista.removeChild(lista.firstChild);
           }
           listarProductos(lista);
@@ -52,3 +52,7 @@ async function listarProductos(lista) {
 }
 
 listarProductos(lista);
+
+export const mostrarProductos = {
+  listarProductos,
+};
