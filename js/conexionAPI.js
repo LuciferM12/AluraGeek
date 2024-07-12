@@ -1,16 +1,21 @@
 async function listarProductos() {
-  const conexion = await fetch("https://fake-api-nine-gold.vercel.app/productos");
+  const conexion = await fetch(
+    "https://fake-api-nine-gold.vercel.app/productos"
+  );
   const conexionConvertida = await conexion.json();
 
   return conexionConvertida;
 }
 
 async function enviarProducto(producto) {
-  const conexion = await fetch("https://fake-api-nine-gold.vercel.app/productos", {
-    method: "POST",
-    headers: { "Content-type": "application/json" },
-    body: producto,
-  });
+  const conexion = await fetch(
+    "https://fake-api-nine-gold.vercel.app/productos",
+    {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: producto,
+    }
+  );
 
   const conexionConvertida = conexion.json();
 
@@ -22,14 +27,16 @@ async function enviarProducto(producto) {
 }
 
 async function eliminarProducto(id) {
-  const conexion = await fetch(`https://fake-api-nine-gold.vercel.app/productos/${id}`, {
-    method: "DELETE",
-  });
+  const conexion = await fetch(
+    `https://fake-api-nine-gold.vercel.app/productos/${id}`,
+    {
+      method: "DELETE",
+    }
+  );
   if (!conexion.ok) {
     throw new Error("Error de eliminación");
   }
   const conexionConvertida = conexion.json();
-  
   return conexionConvertida;
 }
 
