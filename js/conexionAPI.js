@@ -20,7 +20,8 @@ async function enviarProducto(producto) {
   const conexionConvertida = conexion.json();
 
   if (!conexion.ok) {
-    throw new Error("Ha ocurrido un error enviando el producto");
+    window.location.reload();
+    //throw new Error("Ha ocurrido un error enviando el producto");
   }
 
   return conexionConvertida;
@@ -34,7 +35,8 @@ async function eliminarProducto(id) {
     }
   );
   if (!conexion.ok) {
-    throw new Error("Error de eliminación");
+    window.location.reload();
+    //throw new Error("Error de eliminación");
   }
   const conexionConvertida = conexion.json();
   return conexionConvertida;
